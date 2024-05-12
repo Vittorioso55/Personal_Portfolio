@@ -20,9 +20,9 @@ const HeroCharlie = () => {
           <br />
     
           <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 2 }}
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1, duration: 0.5 }}
             className="text-white  mb-2 text sm:text-2xl font-light flex justify-center " 
           >
             <video 
@@ -38,7 +38,7 @@ const HeroCharlie = () => {
           <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1, duration: 1 }}
             className="text-white text-left mb-2 "
           >
             <p className="text-base lg:text-lg font-light line-height: 0 text-center ">
@@ -53,7 +53,7 @@ const HeroCharlie = () => {
             <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
+            transition={{ delay: 1, duration: 1 }}
               className="text-white mb-2 text-center font-bold text-base lg:text-lg "
              >
             <p className="text-base  lg:text-3xl">

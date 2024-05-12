@@ -8,19 +8,15 @@ import MenuOverlay from "./MenuOverlay";
 
 
 const navLinks = [
+
   {
-    title: "Projects",
-    path: "#projects",
-    
-  },
-  {
-    title: "About",
-    path: "#about",
+    title: "About Me",
+    path: "/PageAbout",
   },
 
 ];
 
-const Navbar = () => {
+const PageAbout = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
@@ -66,4 +62,4 @@ const Navbar = () => {
 };
 
 
-export default Navbar;
+export default PageAbout;
