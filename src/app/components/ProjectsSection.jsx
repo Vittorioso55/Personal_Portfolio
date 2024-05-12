@@ -8,13 +8,13 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: 4,
+    id: 3,
     title: "",
-    description: "RadioCast - 2024 - Digitally Objects for Fast Prototyping",
-    image:  "/image/RadioImages/Pic2.png",
+    description: "Genesi.01 - 2024 - Creating Tangible Interface",
+    image: "/image/Genesi/Genesinew2.jpg",
     tag: ["All", "Web"],
-    gitUrl: " RadioCast - 2024 - Digitally Objects for Fast Prototyping",
-    previewUrl: "./projectRadio",
+    gitUrl: "",
+    previewUrl: "./projectGenesis",
   
   },
   {
@@ -39,25 +39,18 @@ const projectsData = [
   
   
   {
-    id: 3,
+   
+
+    id: 4,
     title: "",
-    description: "Genesi.01 - 2024 - Creating Tangible Interface",
-    image: "/image/Genesi/Genesinew2.jpg",
+    description: "RadioCast - 2024 - Digitally Objects for Fast Prototyping",
+    image:  "/image/RadioImages/Pic2.png",
     tag: ["All", "Web"],
-    gitUrl: "",
-    previewUrl: "./projectGenesis",
+    gitUrl: " RadioCast - 2024 - Digitally Objects for Fast Prototyping",
+    previewUrl: "./projectRadio",
   },
   
   
-  {
-    id: 5,
-    title: "",
-    description: "Morce-Code - 2024 - Programming interactive Objects",
-    image: "/image/matrice/m1.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "./projectMatrix",
-  },
   {
     id: 6,
     title: "",
@@ -66,6 +59,17 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectGender",
+
+  
+  },
+  {
+     id: 5,
+    title: "",
+    description: "Morce-Code - 2024 - Programming interactive Objects",
+    image: "/image/matrice/m1.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "/",
+    previewUrl: "./projectMatrix",
   },
 
 
@@ -118,7 +122,7 @@ const ProjectsSection = () => {
           variants={cardVariants}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
-          transition={{ duration: 4, delay: index * 0.8 }}
+          transition={{ duration: 2, delay: index * 0.8 }}
         >
           <ProjectCard
             key={project.id}
