@@ -27,6 +27,7 @@ const HeroCharlie = () => {
           >
             <video 
               autoPlay
+              
               src="/image/Charlie/charlie.mp4"
               alt="Description of the image"
               className="w-full max-h-full "

@@ -40,7 +40,7 @@ const HeroStrolling = () => {
             className="text-white text-left mb-2 "
           >
             <p className="text-base lg:text-lg font-light line-height: 0 text-center ">
-              Name: Infinite Strolling &nbsp; Year: &nbsp; 2024 &nbsp; Scope: &nbsp; Project for "Prototyping Interactive Installation" Course &nbsp; Co-Designer: &nbsp;Vittorio Pace, Ka Young Lee, Kristina Greco  <br />
+              Name: RadioCast &nbsp; Year: &nbsp; 2024 &nbsp; Scope: &nbsp; Project for "Digitally Objects for fast prototyping" Course &nbsp; Co-Designer: &nbsp;Vittorio Pace, Kristina Greco  <br />
               
             </p> 
           </motion.div>
@@ -60,8 +60,7 @@ const HeroStrolling = () => {
            </motion.div>
         </div> 
           <p className="text-base lg:text-lg text-white mb-2 text  font-light flex text-center" >
-          Infinite Strolling is an interactive installation that encourages participants to rethink limitless image consumption through mindless scrolling, especially within platforms like TikTok. Developed as the final project for a three-week Prototyping Interactive Installation course within the Master in Interaction Design at SUPSI, the installation features treadmills that regulate the scrolling speed of a TikTok feed displayed on a screen. Viewers have the option to observe passively or actively engage by stepping onto the treadmills to control the scrolling speed, enhancing the interactive experience.
-            </p>
+          RadioCast is an interactive podcast player. Listen to what you like with different modes: one allows you to filter the podcast selection, and the other allows you to play a podcast randomly. If you like sports or food for example, a whole selection of podcasts is already planned for you! You can switch modes at any time, in a single movement. Improve your car trips, or improve your sunbathing time at the beach. Travel the world with RadioCast!            </p>
 
           <br />
           <br />
@@ -109,13 +108,11 @@ const HeroStrolling = () => {
             className="text-white mb-2 text-center font-light text-base lg:text-2xl "
           >
             <p className="text-base  ">
-            In recent years, our interaction with photos has drastically changed with the rise of infinite scrolling. Social media platforms have become hubs for endless image consumption, and it is important to consider its impact.
+            The project brief, in a few words, was “Re-fabricate an iconic product by upgrading its function to a more contemporary use**”.** The created object had to contain electronic components, such as buttons, potentiometers, simple sensors, etc.
 
-In response to the brief to design an interactive installation for the month-long EXPOSED Torino Foto Festival, we developed "Infinite Strolling," an engaging and immersive Installation.
+The first step in the development of this project was doing some desk research, and being inspired by existing projects, which led to a generation of several ideas for this project.
 
-Featuring  three screens and treadmills, each treadmill corresponds to a screen displaying a TikTok feed with its speed controlling the scrolling. Initially set to different speeds, viewers can observe the effect without interaction. They're also invited to step on and control the scrolling themselves, enhancing the interactive experience.
-
-***Infinite Strolling*** is an installation that aims to inspire participants to revisit the image consumption habits especially within social media platforms.
+The original object chosen is called ***Braun ABR 313 sl***, which is a travel radio alarm clock. It was designed in Germany by Dietrich Lubs. This artist worked with the company Braun for several projects, for example watches, calculators, and different types of alarm clocks. ***Braun ABR 313 sl*** was created in 1989. The object is shown in the following image.
             </p> 
           </motion.div>
         </div>
