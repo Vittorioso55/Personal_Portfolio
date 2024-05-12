@@ -14,9 +14,9 @@ const HeroGender = () => {
           <br />
     
           <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
             className="text-white  mb-2 text sm:text-2xl font-light flex justify-center " 
           >
             <video
@@ -28,9 +28,9 @@ const HeroGender = () => {
             />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 3 }}
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1, duration: 0.5 }}
             className="text-white text-left mb-2 "
           >
             <p className="text-base lg:text-lg font-light line-height: 0 text-center ">
@@ -43,9 +43,9 @@ const HeroGender = () => {
           <br />
           <div className="md:grid md:grid-cols-1 gap-8 items-center px-3 xl:gap-20 sm:py-50 xl:px-16">
             <motion.div
-              initial={{ opacity: 0, x: 1000, y: 0 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={{ duration: 4 }}
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1, duration: 0.5 }}
               className="text-white mb-2 text-center font-bold text-base lg:text-lg "
              >
             <p className="text-base  lg:text-3xl">
@@ -63,9 +63,9 @@ const HeroGender = () => {
         {/* prime 4 immagini 4x4 */}
         <div className="md:grid md:grid-cols-2 gap-8  xl:gap-7 sm:py-50 xl:px-8">
             <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 5 }}
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1, duration: 0.5 }}
             
             className="text-white mb-2 text sm:text-2xl font-light flex justify-center" 
           >
@@ -78,9 +78,9 @@ const HeroGender = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 6 }}
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1, duration: 0.5 }}
             
             className="text-white mb-2 text sm:text-2xl font-light flex justify-center" 
           >
@@ -97,9 +97,9 @@ const HeroGender = () => {
         <br />
         <div className="md:grid md:grid-cols-1 gap-8 items-center  xl:gap-20 sm:py-50 xl:px-16">
           <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 7 }}
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         transition={{ delay: 1, duration: 0.5 }}
             className="text-white mb-2 text-center font-light text-base lg:text-2xl "
           >
             <p className="text-base  ">
@@ -116,9 +116,9 @@ Featuring  three screens and treadmills, each treadmill corresponds to a screen 
         <br />
         <div className="md:grid md:grid-cols-2 gap-8  xl:gap-7 sm:py-50 xl:px-8">
             <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 8 }}
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1, duration: 0.5 }}
             
             className="text-white mb-2 text sm:text-2xl font-light flex justify-center " 
             >
@@ -131,9 +131,9 @@ Featuring  three screens and treadmills, each treadmill corresponds to a screen 
              </motion.div>
 
              <motion.div
-            initial={{ opacity: 0, x: 1000, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ duration: 3 }}
+           initial={{ opacity: 0 }}
+           animate={{ opacity: 1 }}
+           transition={{ delay: 1, duration: 0.5 }}
             
             className="text-white mb-2 text sm:text-2xl font-light flex justify-center" 
              >
