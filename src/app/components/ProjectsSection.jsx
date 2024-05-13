@@ -98,7 +98,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <div className="text-white flex flex-row justify-right items-right  "></div>
+      <div className="text-white flex flex-row justify-right items-right"></div>
       <ul ref={ref} className="grid md:grid-cols-2 gap:0 ml-0">
         {filteredProjects.map((project, index) => (
           <motion.li
@@ -120,6 +120,8 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
+
+    
     </section>
   );
 };

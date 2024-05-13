@@ -114,7 +114,7 @@ Featuring  three screens and treadmills, each treadmill corresponds to a screen 
           </motion.div>
         </div>
         <br />
-        <div className="md:grid md:grid-cols-2 gap-8  xl:gap-7 sm:py-50 xl:px-8">
+        <div className="md:w-1/2 md:px-8 md:pr-16 md:overflow-auto mt-20  h-screen">
             <motion.div
            initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
