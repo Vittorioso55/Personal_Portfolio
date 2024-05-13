@@ -8,10 +8,11 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    
     id: 3,
     title: "",
     description: "Genesi.01 - 2024 - Creating Tangible Interface",
-    image: "/image/Genesi/Genesinew2.jpg",
+    image: "/image/Genesi/Genesi0.png",
     tag: ["All", "Web"],
     gitUrl: "",
     previewUrl: "./projectGenesis",
@@ -96,51 +97,30 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects ">
-      
-    <div className="text-white flex flex-row justify-right items-right  ">
-      {/* <ProjectTag
-        onClick={handleTagChange}
-        name="All"
-        isSelected={tag === "All"}
-      />
-      <ProjectTag
-        onClick={handleTagChange}
-        name="Web"
-        isSelected={tag === "Web"}
-      />
-      <ProjectTag
-        onClick={handleTagChange}
-        name="Mobile"
-        isSelected={tag === "Mobile"}
-      /> */}
-    </div>
-    <ul ref={ref} className="grid md:grid-cols-2 gap:0 ml-0">
-      {filteredProjects.map((project, index) => (
-        <motion.li
-          key={index}
-          variants={cardVariants}
-          initial="initial"
-          animate={isInView ? "animate" : "initial"}
-          transition={{ duration: 2, delay: index * 0.8 }}
-        >
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.gitUrl}
-            imgStyle={{ objectFit: 'cover', width: '200%', height: '200%'  }}
-            previewUrl={project.previewUrl}
-          
-            
-    
-         
-          />
-        </motion.li>
-      ))}
-    </ul>
-  </section>
+    <section id="projects">
+      <div className="text-white flex flex-row justify-right items-right  "></div>
+      <ul ref={ref} className="grid md:grid-cols-2 gap:0 ml-0">
+        {filteredProjects.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 2, delay: index * 0.8 }}
+          >
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              imgStyle={{ width: '100%', height: '100%' }} // Imposta l'altezza automaticamente in base alla larghezza
+              previewUrl={project.previewUrl}
+            />
+          </motion.li>
+        ))}
+      </ul>
+    </section>
   );
 };
 

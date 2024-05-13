@@ -1,4 +1,5 @@
 {
+  "/projectGenesis/page": "app/projectGenesis/page.js",
   "/page": "app/page.js",
   "/PageAbout/page": "app/PageAbout/page.js"
 }
