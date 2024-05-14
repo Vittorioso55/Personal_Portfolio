@@ -8,10 +8,10 @@ const HeroCharlie = () => {
 
     return (
 
-        <section className="lg:py-2 mb: py-0 flex flex-col md:flex-row items-left">
+        <section className="lg:py-2 mb: py-0 flex flex-col md:flex-row items-left mt-20">
           {/* Colonna sinistra per il testo */}
           <div className="md:w-1/2 md:px-8 md:pr-16 md:overflow-auto h-screen">
-            <div className="text-white mb-2 text-sm lg:text-lg font-light mt-20 text-left">
+            <div className="text-white  mb-2 text-sm lg:text-2xl font-light text-left">
               <p>
                 Name: Charlie &nbsp; Year: &nbsp; 2024 &nbsp; Scope: &nbsp; Project
                 for "Machine Learning for Designers" Course &nbsp; Co-Designer: &nbsp; Raffaele
@@ -51,7 +51,7 @@ const HeroCharlie = () => {
             </div>
           </div>
           {/* Colonna destra per le immagini e il video */}
-          <div className="md:w-1/2 md:px-8 md:pl-16 mt-20 md:overflow-auto h-screen">
+          <div className="md:w-1/2 md:px-8 md:pl-16 mt-0 md:overflow-auto h-screen">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

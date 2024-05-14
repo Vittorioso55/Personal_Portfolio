@@ -10,7 +10,7 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 mt-10">
         <li>C & C++</li>
         <li>MicroPhyton</li>
         <li>HTML & CSS</li>
@@ -27,9 +27,9 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>FABIO BESTA Corporate Information Systems, Ragusa Italy </li>
-        <li>IULM Bachelor in Corporate communication and Pubblic Relations, Milan Italy </li>
-        <li>SUSPSI Master in Interaction Design, Mendrisio Swiss</li>
+        <li>FABIO BESTA Corporate Information Systems, Ragusa, Italy </li>
+        <li>IULM Bachelor in Corporate communication and Pubblic Relations, Milan, Italy </li>
+        <li>SUPSI Master in Interaction Design, Mendrisio, Swiss</li>
       </ul>
     ),
   },
@@ -47,16 +47,14 @@ const PageAbout = () => {
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="container mx-auto flex flex-col md:flex-row mt-40 p-0">
-        <div className="md:w-1/2 mx-4">
-          <h2 className="text-4xl font-bold text-white mb-4 ">
-            <MovingText>About Me</MovingText>
-          </h2>
+    <section className="text-white" id="about ">
+      <div className=" mt-40 flex flex-col md:flex-row mx-2">
+        <div className="md:w-1/2 ">
+          
           <p className="text-base lg:text-lg">
             I am Vittorio Gennuso, a multidisciplinary specialist with a passion for design and technology. With a background in Corporate Information Systems and Corporate Communication in Milan, I am currently completing a Master in Interaction Design in Switzerland. My skills range from coding (HTML, CSS, JavaScript, C++) to product design using Fusion 360. Recently, I have gained knowledge in programming Arduino to create interactive objects and IoT devices.
           </p>
-          <div className="flex flex-row mt-16">
+          <div className="flex flex-row mt-72">
             <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
               Skills
             </TabButton>
@@ -64,10 +62,10 @@ const PageAbout = () => {
               Education
             </TabButton>
           </div>
-          <div className="mt-16">{TAB_DATA.find((t) => t.id === tab).content}</div>
+          <div className="mt-2">{TAB_DATA.find((t) => t.id === tab).content}</div>
         </div>
-        <div className="md:w-1/2 mx-4">
-          <Image src="/image/Foto_Me/Vittorio.png" alt="Your Image Alt" width={500} height={500} className="w-full" />
+        <div className="md:w-1/2 mx-0">
+          <Image src="/image/Foto_Me/Vittorio.png"  width={800} height={800} />
         </div>
       </div>
     </section>

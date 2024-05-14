@@ -45,6 +45,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/projectRadio/page.js"
+    ],
+    "/ProjectRenew/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ProjectRenew/page.js"
     ]
   }
 }

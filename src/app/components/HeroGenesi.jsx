@@ -14,7 +14,7 @@ const Herogenesi = () => {
   return (
     <section className="lg:py-2 mb: py-0 flex flex-col md:flex-row items-left">
       {/* Colonna sinistra per il testo */}
-      <div className="md:w-1/2 md:px-8 md:pr-16 md:overflow-auto mt-20  h-screen">
+      <div className="md:w-1/2 md:px-8 md:pr-16 md:overflow-auto h-screen mt-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -22,8 +22,8 @@ const Herogenesi = () => {
           className="text-white  mb-2 text-sm lg:text-2xl font-light text-left"
         >
           <p>
-            Name: Genesi-01 &nbsp; Year: &nbsp; 2024 &nbsp; Scope: &nbsp; Project
-            for "Creating for Tangible Interface" Course &nbsp; Co-Designer: &nbsp; Alessandro
+            Name: Genesi-01 &nbsp; Year: &nbsp; 2024 &nbsp; <br /> Scope: &nbsp; Project 
+            for "Creating for Tangible Interface" Course &nbsp; <br />Co-Designer: &nbsp; Alessandro
             Plantera, Alice Mioni
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ const Herogenesi = () => {
         </motion.div>
       </div>
       {/* Colonna destra per le immagini e il video */}
-      <div className="md:w-1/2 md:px-8 md:pl-16 md:overflow-auto h-screen">
+      <div className="md:w-1/2 md:px-8 md:pl-16 md:overflow-auto h-screen mt-32">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

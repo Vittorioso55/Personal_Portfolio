@@ -3,6 +3,7 @@ import HeroProjects from "../components/HeroRadio";
 import Navbar from "../components/Navbar";
 import AboutSection from "../components/AboutSection";
 import HeroGenesi from "../components/HeroGenesi";
+import Cursor from "../components/Cursor";
 
 
 
@@ -12,7 +13,7 @@ export default function Home() {
    
     
 
-     
+     <Cursor />
      <Navbar />
      <div>
       <HeroGenesi />

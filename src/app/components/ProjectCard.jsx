@@ -9,7 +9,9 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       <div
         className="h-0 relative group mt-0"
         style={{
-          paddingBottom: '80%', // Imposta l'altezza come rapporto 1:1
+          // paddingBottom: '94%', // Imposta l'altezza come rapporto 1:1
+          height: 372,
+          width:756,
           background: `url(${imgUrl})`,
           backgroundSize: "cover"
         }}
@@ -17,13 +19,11 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
           <Link href={previewUrl}
           className="h-full w-full  border-[#ADB7BE] hover:border-white group/link">
-              
-           
           </Link>
         </div>
       </div>
-      <div className="text-white rounded-b-xl md-0 mt-0  py-6 px-4">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <div className="text-white rounded-b-xl md-0 mt-0 ">
+        <h3 className="text-xl font-semibold">{title}</h3>
         <p className="text-[#ADB7BE] ">{description}</p>
       </div>
     </div>

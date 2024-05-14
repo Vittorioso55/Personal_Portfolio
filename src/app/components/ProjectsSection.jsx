@@ -12,7 +12,7 @@ const projectsData = [
     id: 3,
     title: "",
     description: "Genesi.01 - 2024 - Creating Tangible Interface",
-    image: "/image/Genesi/Genesi0.png",
+    image: "/image/Genesi/genesi0.png",
     tag: ["All", "Web"],
     gitUrl: "",
     previewUrl: "./projectGenesis",
@@ -37,11 +37,17 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "./projectStrolling",
   },
-  
+  {
+    id: 7,
+    title: "",
+    description: "Renew - 2023 - Designing Intelligence Experience",
+    image: "/image/ReNew/ReNew.png",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "./ProjectRenew",
+  },
   
   {
-   
-
     id: 4,
     title: "",
     description: "RadioCast - 2024 - Digitally Objects for Fast Prototyping",
@@ -50,6 +56,7 @@ const projectsData = [
     gitUrl: " RadioCast - 2024 - Digitally Objects for Fast Prototyping",
     previewUrl: "./projectRadio",
   },
+
   
   
   {
@@ -99,14 +106,14 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <div className="text-white flex flex-row justify-right items-right"></div>
-      <ul ref={ref} className="grid md:grid-cols-2 gap:0 ml-0">
+      <ul ref={ref} className="grid md:grid-cols-2 gap:0 ml-0 mt-16 md-0">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 2, delay: index * 0.8 }}
+            transition={{ duration: '0.3', delay: index * 0.8 }}
           >
             <ProjectCard
               key={project.id}
@@ -114,7 +121,7 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
-              imgStyle={{ width: '100%', height: '100%' }} // Imposta l'altezza automaticamente in base alla larghezza
+              imgStyle={{ width: '200%', height: '200%' }} 
               previewUrl={project.previewUrl}
             />
           </motion.li>
