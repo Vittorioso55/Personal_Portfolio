@@ -7,6 +7,27 @@ import { motion, useInView } from "framer-motion";
 
 
 const projectsData = [
+
+  {
+    id: 2,
+    title: "",
+    description: "Charlie - 2024 - Machine Learing for Designers",
+    image: "/image/Charlie/Charlie1.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "./projectCharlie",
+  
+  },
+
+  {
+    id: 7,
+    title: "",
+    description: "Renew - 2023 - Designing Intelligence Experience",
+    image: "/image/ReNew/ReNew.png",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "./ProjectRenew",
+  },
   {
     
     id: 3,
@@ -18,16 +39,7 @@ const projectsData = [
     previewUrl: "./projectGenesis",
   
   },
-  {
-    id: 2,
-    title: "",
-    description: "Charlie - 2024 - Machine Learing for Designers",
-    image: "/image/Charlie/Charlie1.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "./projectCharlie",
   
-  },
   {
     id: 1,
     title: "",
@@ -37,15 +49,7 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "./projectStrolling",
   },
-  {
-    id: 7,
-    title: "",
-    description: "Renew - 2023 - Designing Intelligence Experience",
-    image: "/image/ReNew/ReNew.png",
-    tag: ["All", "Web"],
-    gitUrl: "",
-    previewUrl: "./ProjectRenew",
-  },
+
   
   {
     id: 4,
