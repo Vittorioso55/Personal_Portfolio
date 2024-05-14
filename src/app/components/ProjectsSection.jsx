@@ -16,7 +16,6 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectCharlie",
-  
   },
 
   {
@@ -67,7 +66,7 @@ const projectsData = [
     id: 6,
     title: "",
     description: "Gender Inequality - 2024 - Coding P5.Js",
-    image: "/image/gender/gender1.png",
+    image: "/image/gender/gender3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectGender",
@@ -75,7 +74,7 @@ const projectsData = [
   
   },
   {
-     id: 5,
+    id: 5,
     title: "",
     description: "Morce-Code - 2024 - Programming interactive Objects",
     image: "/image/matrice/m1.png",

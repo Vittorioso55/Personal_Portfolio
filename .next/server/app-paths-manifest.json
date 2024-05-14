@@ -1,3 +1,7 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/projectGenesis/page": "app/projectGenesis/page.js",
+  "/ProjectRenew/page": "app/ProjectRenew/page.js",
+  "/projectStrolling/page": "app/projectStrolling/page.js",
+  "/projectCharlie/page": "app/projectCharlie/page.js"
 }

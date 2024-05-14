@@ -22,9 +22,8 @@ const Herogenesi = () => {
           className="text-white  mb-2 text-sm lg:text-2xl font-light text-left"
         >
           <p>
-            Name: Genesi-01 &nbsp; Year: &nbsp; 2024 &nbsp; <br /> Scope: &nbsp; Project 
-            for "Creating for Tangible Interface" Course &nbsp; <br />Co-Designer: &nbsp; Alessandro
-            Plantera, Alice Mioni
+            Name: Genesi-01 &nbsp; <br /> Year: &nbsp; 2024 &nbsp; <br /> Scope: &nbsp; Project 
+            for "Creating for Tangible Interface" Course &nbsp; 
           </p>
         </motion.div>
         <motion.div
@@ -47,9 +46,14 @@ const Herogenesi = () => {
             The concept of this box revolves around the original sin of Genesis. The box is always delivered and shipped inside its transport box. Genesi.01 opens like a book (reference to the Bible) and allows the user to record their sin, for a maximum of 10 seconds. The sin will be transcribed on a sheet of paper which will always remain inside the box and no one will be able to take it. Sin is also codified so that no one will ever discover it, and the sinner will be freed from its burden. A confessional, a traveling witness which will one day return to his creator.
           </p>
         </motion.div>
+        <div className="mt-80 text-[#ADB7BE] text-left font-light">
+              <p> Co-Designer: &nbsp; Alessandro Plantera
+                , Alice Mioni
+              </p>
+              </div>
       </div>
       {/* Colonna destra per le immagini e il video */}
-      <div className="md:w-1/2 md:px-8 md:pl-16 md:overflow-auto h-screen mt-32">
+      <div className="  md:w-1/2 md:px-8 md:pl-16 md:overflow-auto h-screen mt-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

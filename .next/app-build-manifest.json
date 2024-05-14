@@ -5,11 +5,41 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/ProjectRenew/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ProjectRenew/page.js"
+    ],
+    "/projectCharlie/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projectCharlie/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/projectGenesis/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projectGenesis/page.js"
+    ],
+    "/projectStrolling/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projectStrolling/page.js"
+    ],
+    "/projectMatrix/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projectMatrix/page.js"
+    ],
+    "/PageAbout/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/PageAbout/page.js"
     ]
   }
 }

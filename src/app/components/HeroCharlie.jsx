@@ -13,10 +13,10 @@ const HeroCharlie = () => {
           <div className="md:w-1/2 md:px-8 md:pr-16 md:overflow-auto h-screen">
             <div className="text-white  mb-2 text-sm lg:text-2xl font-light text-left">
               <p>
-                Name: Charlie &nbsp; Year: &nbsp; 2024 &nbsp; Scope: &nbsp; Project
-                for "Machine Learning for Designers" Course &nbsp; Co-Designer: &nbsp; Raffaele
-                Ammietta, Alessia La Rocca
-              </p>
+                Name: Charlie &nbsp;<br /> Year: &nbsp; 2024 &nbsp;<br /> Scope: &nbsp; Project
+                for "Machine Learning for Designers" Course &nbsp; 
+                </p>
+              
             </div>
             <div className="text-white mb-2 text-left font-light">
               <p>
@@ -48,50 +48,45 @@ const HeroCharlie = () => {
                 and Charlie will conceal the contents of the screen by lowering a
                 shutter.
               </p>
+              <div className="mt-80 text-[#ADB7BE] mb-2 text-left font-light">
+              <p> Co-Designer: &nbsp; Raffaele
+                Ammietta, Alessia La Rocca
+              </p>
+              </div>
             </div>
           </div>
           {/* Colonna destra per le immagini e il video */}
           <div className="md:w-1/2 md:px-8 md:pl-16 mt-0 md:overflow-auto h-screen">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
+            <div 
+              
               className="text-white mb-2 flex justify-center"
             >
               <video autoPlay src="/image/Charlie/charlie.mp4" className="w-full max-h-full" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
+            </div>
+            <div
+              
               className="text-white mb-2 flex justify-center"
             >
               <img src="/image/Charlie/Charlie4.jpg" alt="Description of the image" className="w-full max-h-full" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1.5 }}
+            </div>
+            <div
+             
               className="text-white mb-2 flex justify-center"
             >
               <img src="/image/Charlie/Charlie2.jpg" alt="Description of the image" className="w-full max-h-full" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 2 }}
+            </div>
+            <div
+             
               className="text-white mb-2 flex justify-center"
             >
               <img src="/image/Charlie/Charlie.jpg" alt="Description of the image" className="w-full max-h-full" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 2.5 }}
+            </div>
+            <div
+              
               className="text-white mb-2 flex justify-center"
             >
               <img src="/image/Charlie/Charlie1.jpg" alt="Description of the image" className="w-full max-h-full" />
-            </motion.div>
+            </div>
           </div>
         </section>
       );

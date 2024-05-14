@@ -680,6 +680,18 @@ video {
 .mt-\[-3rem\] {
   margin-top: -3rem;
 }
+.mt-52 {
+  margin-top: 13rem;
+}
+.mt-80 {
+  margin-top: 20rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mt-60 {
+  margin-top: 15rem;
+}
 .block {
   display: block;
 }
@@ -730,6 +742,9 @@ video {
 }
 .max-w-\[1240px\] {
   max-width: 1240px;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .cursor-pointer {
   cursor: pointer;

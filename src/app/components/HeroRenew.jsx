@@ -22,8 +22,8 @@ const HeroRenew = () => {
           className="text-white  mb-2 text-sm lg:text-2xl font-light text-left"
         >
           <p>
-            Name: ReNew &nbsp; Year: &nbsp; 2023 &nbsp; <br /> Scope: &nbsp; Project 
-            for "Designing Intelligence Experience" Course &nbsp; <br />Co-Designer: &nbsp; Sophie Sprugacci, Lorenzo Di Lernia, Marco Luraschi
+            Name: ReNew &nbsp; <br /> Year: &nbsp; 2023 &nbsp; <br /> Scope: &nbsp; Project 
+            for "Designing Intelligence Experience" Course &nbsp; 
           </p>
         </motion.div>
         <motion.div
@@ -50,7 +50,15 @@ So, how an E-commerce can help the circular economy?
 
 An E-commerce that sells technology products by giving total importance and priority to used and  efurbished items, so that encouraging their reuse, can help a lot in sharing to the customer awareness and informations regarding the importance of the circular economy.          </p>
         </motion.div>
+
+        <div className="mt-80 text-[#ADB7BE] text-left font-light">
+              <p> Co-Designer: &nbsp; Sophie Sprugacci
+                , Marco Luraschi, Lorenzo di Lernia
+              </p>
+              </div>
       </div>
+      
+    
       {/* Colonna destra per le immagini e il video */}
       <div className="md:w-1/2 md:px-8 md:pl-16 md:overflow-auto h-screen mt-20">
         <motion.div
