@@ -5,6 +5,12 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
     "/ProjectRenew/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -15,16 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/projectCharlie/page.js"
     ],
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
     "/projectGenesis/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/projectGenesis/page.js"
+    ],
+    "/PageAbout/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/PageAbout/page.js"
     ],
     "/projectStrolling/page": [
       "static/chunks/webpack.js",
@@ -36,10 +41,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/projectMatrix/page.js"
     ],
-    "/PageAbout/page": [
+    "/projectEdee/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/PageAbout/page.js"
+      "static/chunks/app/projectEdee/page.js"
+    ],
+    "/projectRadio/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projectRadio/page.js"
     ]
   }
 }

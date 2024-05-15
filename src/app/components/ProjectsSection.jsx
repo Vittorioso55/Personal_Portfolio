@@ -7,12 +7,43 @@ import { motion, useInView } from "framer-motion";
 
 
 const projectsData = [
+  {
+    id: 8,
+    title: "",
+    description: "Edee  - 2024 - Creating Intelligente Experience",
+    image: "/image/Edee/EdeeLogo.png",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "./projectEdee",
 
+  
+  },
+  {
+    id: 1,
+    title: "",
+    description: "Infinite Strolling - 2024 - Prototyping Interactive Installation ",
+    image: "/image/Strolling/Strolling7.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "./projectStrolling",
+  },
+  
+  {
+    
+    id: 3,
+    title: "",
+    description: "Genesi.01 - 2024 - Creating Tangible Interface",
+    image: "/image/Genesi/genesinew1.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "./projectGenesis",
+  
+  },
   {
     id: 2,
     title: "",
     description: "Charlie - 2024 - Machine Learing for Designers",
-    image: "/image/Charlie/Charlie1.jpg",
+    image: "/image/Charlie/Charlie2.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectCharlie",
@@ -27,29 +58,7 @@ const projectsData = [
     gitUrl: "",
     previewUrl: "./ProjectRenew",
   },
-  {
-    
-    id: 3,
-    title: "",
-    description: "Genesi.01 - 2024 - Creating Tangible Interface",
-    image: "/image/Genesi/genesi0.png",
-    tag: ["All", "Web"],
-    gitUrl: "",
-    previewUrl: "./projectGenesis",
-  
-  },
-  
-  {
-    id: 1,
-    title: "",
-    description: "Infinite Strolling - 2024 - Prototyping Interactive Installation ",
-    image: "/image/Strolling/Strolling1.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "./projectStrolling",
-  },
 
-  
   {
     id: 4,
     title: "",
@@ -58,10 +67,7 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: " RadioCast - 2024 - Digitally Objects for Fast Prototyping",
     previewUrl: "./projectRadio",
-  },
-
-  
-  
+  }, 
   {
     id: 6,
     title: "",
@@ -70,8 +76,6 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectGender",
-
-  
   },
   {
     id: 5,
@@ -82,10 +86,6 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "./projectMatrix",
   },
-
-
- 
-
 ];
 
 const ProjectsSection = () => {
@@ -124,7 +124,7 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
-              imgStyle={{ width: '200%', height: '200%' }} 
+              imgStyle={{ width: '100%', height: '100%' }} 
               previewUrl={project.previewUrl}
             />
           </motion.li>

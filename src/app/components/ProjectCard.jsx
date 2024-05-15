@@ -9,7 +9,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       <div
         className="h-0 relative group mt-0"
         style={{
-          paddingBottom: '94%', // Imposta l'altezza come rapporto 1:1
+          paddingBottom: '79%', // Imposta l'altezza come rapporto 1:1
           background: `url(${imgUrl})`,
           backgroundSize: "cover"
         }}
