@@ -1,13 +1,6 @@
 "use client";
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import MovingText from "react-moving-text";
-import { useSpring, animated } from "react-spring";
-
-import NavLink from "./NavLink";
-
-
 
 const HeroEdee = () => {
   ;
