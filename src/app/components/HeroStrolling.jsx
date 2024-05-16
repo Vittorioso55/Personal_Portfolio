@@ -52,7 +52,7 @@ const HeroStrolling = () => {
       </div>
       {/* Colonna destra per le immagini e il video */}
       <div className="md:w-1/2 mt-20  md:px-8 md:pl-16 md:overflow-auto h-screen">
-        <div className="text-white mb-2 flex justify-center">
+        <div className="text-white mb-2 flex justify-center mt-10">
           <video controls src="/image/Strolling/Strolling.mp4" className="w-full max-h-full" />
         </div>
 
