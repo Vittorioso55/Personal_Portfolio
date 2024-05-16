@@ -60,7 +60,7 @@ const Herogenesi = () => {
           transition={{ delay: 1, duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
-          <video autoPlay src="/image/Genesi/Genesi.mp4" className="w-full max-h-full" />
+          <video controls src="/image/Genesi/Genesi.mp4" className="w-full max-h-full" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}

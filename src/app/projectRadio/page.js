@@ -1,8 +1,7 @@
-import Image from "next/image";
+
 import HeroProjects from "../components/HeroRadio";
 import Navbar from "../components/Navbar";
-import AboutSection from "../components/AboutSection";
-import Cards from "../components/Cards";
+import Cursor from "../components/Cursor";
 
 
 
@@ -15,7 +14,7 @@ export default function Home() {
      
      <Navbar />
      <div>
-    
+    <Cursor />
      <HeroProjects />
      <br />
     
