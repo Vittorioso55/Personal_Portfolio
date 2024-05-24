@@ -1,10 +1,6 @@
-import Image from "next/image";
-import HeroProjects from "../components/HeroRadio";
 import Navbar from "../components/Navbar";
-import AboutSection from "../components/AboutSection";
-import Cards from "../components/Cards";
 import HeroMatrix from "../components/HeroMatrix";
-
+import Cursor from "../components/Cursor";
 
 export default function Home() {
   return (
@@ -17,10 +13,9 @@ export default function Home() {
      <div>
     
      <HeroMatrix />
+     <Cursor />
      <br />
-  
-  
-  
+
     </div>
     
     </main>

@@ -15,7 +15,7 @@ const HeroMatrix = () => {
     <section className="lg:py-2 mb: py-0 flex flex-col md:flex-row items-left">
       {/* Colonna sinistra per il testo */}
       <div className="md:w-1/2 md:px-8 md:pr-16 md:overflow-auto h-screen">
-        <div className="text-white  mb-2 text-sm lg:text-2xl font-light text-left">
+        <div className="text-white  mb-2 text-sm lg:text-2xl font-light text-left mt-16">
           <p>
             Name: Morce Code &nbsp;<br /> Year: &nbsp; 2024 &nbsp;<br /> Scope: &nbsp; Project
             for "Programming Interactive Objects" Course &nbsp;
@@ -24,6 +24,13 @@ const HeroMatrix = () => {
         </div>
 
         <div className="text-white text-left font-light">
+          
+          <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-white  text-left font-light mb-30"
+        >
           <p>
             For the "Programming Interactive Object" course, we were assigned the task of designing and implementing a visual representation using an LED matrix. This challenge represented a new experience for our team, as we were introduced to this technology for the first time. After a careful analysis of the potential of the LED matrix, we considered various options for its utilization.
 
@@ -35,8 +42,12 @@ const HeroMatrix = () => {
 
             The installation is designed to transform the texts of famous historical messages into sequences of dots and dashes, through the creative use of Morse code. Each message takes on a new life, illuminating the LED matrix with a dynamic show of lights that captures the attention of the spectators."
           </p>
-
-          <div className="mt-40 text-[#ADB7BE] mb-2 text-left font-light">
+        </motion.div>
+<br />
+<br />
+<br />
+<br />
+          <div className="mt-32 text-[#ADB7BE]  text-left font-light">
             <p> Co-Designer: &nbsp; Vittorio Pace
             </p>
           </div>
@@ -71,7 +82,7 @@ const HeroMatrix = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
           <img
@@ -83,7 +94,7 @@ const HeroMatrix = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          transition={{ delay: 1.3, duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
           <img
@@ -95,7 +106,7 @@ const HeroMatrix = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          transition={{ delay: 1.4, duration: 0.5 }}
           className="text-white  flex justify-center"
         >
           <img

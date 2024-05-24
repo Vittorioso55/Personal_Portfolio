@@ -1,5 +1,8 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
+
+
 const HeroCharlie = () => {
   ;
 
@@ -15,36 +18,45 @@ const HeroCharlie = () => {
           </p>
 
         </div>
-        <div className="text-white mb-2 text-left font-light">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-white  text-left font-light mb-80"
+        >
           <p>
             The brief of this workshop was “Unlock” and it was aimed to ideate
             and develop alternative unlocking interactions powered by machine
             learning. Our final concept was “Charlie, the Secret Guardian”.
           </p>
-        </div>
+
+          <div className="text-white mb-2 text-left font-light">
+            <p>
+              Charlie is designed with the primary objective of safeguarding the
+              confidential entries made by the user in their diary. He lives
+              within a website constructed with p5.js, and employs two distinct
+              machine learning algorithms to identify the rightful owner of the
+              diary. To fulfill its mission, Charlie employs two different
+              strategies.
+            </p>
+            <p>
+              Strategically positioning the Charlie box, for instance, near the
+              entrance of a room, it remotely monitors the surrounding area to
+              ensure no unauthorized individuals are present. In the event of
+              someone approaching, Charlie promptly alerts its master, giving him
+              time to hide the diary.
+            </p>
+            <p>
+              The second control acts directly from the user's computer webcam: if
+              a person unrelated to the diary owner stands in front of the
+              screen, the machine learning algorithm will detect this as a threat
+              and Charlie will conceal the contents of the screen by lowering a
+              shutter.
+            </p>
+          </div>
+        </motion.div>
         <div className="text-white mb-2 text-left font-light">
-          <p>
-            Charlie is designed with the primary objective of safeguarding the
-            confidential entries made by the user in their diary. He lives
-            within a website constructed with p5.js, and employs two distinct
-            machine learning algorithms to identify the rightful owner of the
-            diary. To fulfill its mission, Charlie employs two different
-            strategies.
-          </p>
-          <p>
-            Strategically positioning the Charlie box, for instance, near the
-            entrance of a room, it remotely monitors the surrounding area to
-            ensure no unauthorized individuals are present. In the event of
-            someone approaching, Charlie promptly alerts its master, giving him
-            time to hide the diary.
-          </p>
-          <p>
-            The second control acts directly from the user's computer webcam: if
-            a person unrelated to the diary owner stands in front of the
-            screen, the machine learning algorithm will detect this as a threat
-            and Charlie will conceal the contents of the screen by lowering a
-            shutter.
-          </p>
+
           <div className="mt-80 text-[#ADB7BE] mb-2 text-left font-light">
             <p> Co-Designer: &nbsp; Raffaele
               Ammietta, Alessia La Rocca
@@ -54,36 +66,61 @@ const HeroCharlie = () => {
       </div>
       {/* Colonna destra per le immagini e il video */}
       <div className="md:w-1/2 md:px-8 md:pl-16 mt-0 md:overflow-auto h-screen">
-        <div
 
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
-          <video controls src="/image/Charlie/charlie.mp4" className="w-full max-h-full" />
-        </div>
-        <div
+          <video controls src="/image/Charlie/charlie.mp4" className="w-full max-h-full" />        </motion.div>
 
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
           <img src="/image/Charlie/Charlie4.jpg" alt="Description of the image" className="w-full max-h-full" />
-        </div>
-        <div
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.3 ,duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
           <img src="/image/Charlie/Charlie2.jpg" alt="Description of the image" className="w-full max-h-full" />
-        </div>
-        <div
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
           <img src="/image/Charlie/Charlie.jpg" alt="Description of the image" className="w-full max-h-full" />
-        </div>
-        <div
+        </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
           className="text-white mb-2 flex justify-center"
         >
           <img src="/image/Charlie/Charlie1.jpg" alt="Description of the image" className="w-full max-h-full" />
-        </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="text-white mb-2 flex justify-center"
+        >
+          <img src="/image/Charlie/Charlie1.jpg" alt="Description of the image" className="w-full max-h-full" />
+        </motion.div>
+
       </div>
     </section>
   );

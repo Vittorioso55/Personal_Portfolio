@@ -24,7 +24,7 @@ const PageAbout = () => {
       <div className="flex items-center justify-between container lg:py-4 mx-auto px-1 py-2 ">
         <div className="flex items-left ">
           <Link href={"/"} className="py-2 text-[#ADB7BE] sm:text-xl rounded hover:text-white ">
-            <span className="ml-0">Vittorio Gennuso</span> 
+            <span className="ml-0">Vittorio Gennuso</span>
           </Link>
         </div>
 
@@ -47,7 +47,7 @@ const PageAbout = () => {
         </div>
         <div className="menu hidden md:block md:w-auto " id="navbar ">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 ">
-            
+
             {navLinks.map((link, index) => (
               <li key={index} >
                 <NavLink href={link.path} title={link.title} />

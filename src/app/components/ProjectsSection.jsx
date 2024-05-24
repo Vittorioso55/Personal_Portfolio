@@ -11,12 +11,23 @@ const projectsData = [
     id: 8,
     title: "",
     description: "Edee  - 2024 - Creating Intelligente Experience",
-    image: "/image/Edee/EdeeLogo.png",
+    image: "/image/Edee/Edeenew2.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectEdee",
 
-  
+
+  },
+  {
+
+    id: 3,
+    title: "",
+    description: "Genesi.01 - 2024 - Creating Tangible Interface",
+    image: "/image/Genesi/GenesiLogo.png",
+    tag: ["All", "Web"],
+    gitUrl: "",
+    previewUrl: "./projectGenesis",
+
   },
   {
     id: 1,
@@ -26,18 +37,6 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectStrolling",
-  },
-  
-  {
-    
-    id: 3,
-    title: "",
-    description: "Genesi.01 - 2024 - Creating Tangible Interface",
-    image: "/image/Genesi/genesinew1.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "",
-    previewUrl: "./projectGenesis",
-  
   },
   {
     id: 2,
@@ -63,11 +62,11 @@ const projectsData = [
     id: 4,
     title: "",
     description: "RadioCast - 2024 - Digitally Objects for Fast Prototyping",
-    image:  "/image/RadioImages/Pic2.png",
+    image: "/image/RadioImages/Pic2.png",
     tag: ["All", "Web"],
     gitUrl: " RadioCast - 2024 - Digitally Objects for Fast Prototyping",
     previewUrl: "./projectRadio",
-  }, 
+  },
   {
     id: 6,
     title: "",
@@ -109,29 +108,26 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <div className="text-white flex flex-row justify-right items-right"></div>
-      <ul ref={ref} className="grid md:grid-cols-2 gap:0 ml-0 mt-16 md-0">
+      <ul ref={ref} className="grid md:grid-cols-2 gap:0 ml-0  md-0 mt-20">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
-            variants={cardVariants}
+            key={project.id}
             initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: '0.3', delay: index * 0.8 }}
+            animate="animate"
+            variants={cardVariants}
+            transition={{ delay: index * 1, duration: 0.7 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
-              imgStyle={{ width: '100%', height: '100%' }} 
+              imgStyle={{ width: '110%', height: '110%' }}
               previewUrl={project.previewUrl}
             />
           </motion.li>
         ))}
       </ul>
-
-    
     </section>
   );
 };
