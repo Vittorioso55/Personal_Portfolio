@@ -1,11 +1,10 @@
-import AboutSection from "./components/AboutSection";
-import HeroSection from "./components/HeroSection";
+
 import Navbar from "./components/Navbar";
 import ProjectsSection from "./components/ProjectsSection";
 import Cursor from "./components/Cursor";
 
 
-// import Cards from "./components/Cards";
+
 
 export default function Home() {
   return (

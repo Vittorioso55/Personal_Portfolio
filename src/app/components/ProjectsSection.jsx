@@ -19,7 +19,6 @@ const projectsData = [
 
   },
   {
-
     id: 3,
     title: "",
     description: "Genesi.01 - 2024 - Creating Tangible Interface",
@@ -46,6 +45,16 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectCharlie",
+  },
+
+  {
+    id: 9,
+    title: "",
+    description: "Luna Care- 2024 - Multimodal User Exprience",
+    image: "/image/LunaCare/Luna3.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "./projectLuna",
   },
 
   {
