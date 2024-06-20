@@ -1,5 +1,3 @@
 {
-  "/page": "app/page.js",
-  "/projectGenesis/page": "app/projectGenesis/page.js",
-  "/projectLuna/page": "app/projectLuna/page.js"
+  "/page": "app/page.js"
 }

@@ -32,6 +32,17 @@ const HeroLuna = () => {
         </div>
       </div>
       {/* Colonna destra per le immagini e il video */}
+
+      <div className="  md:w-1/2 md:px-8 md:pl-16 md:overflow-auto h-screen mt-20">
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1, duration: 0.5 }}
+      className="text-white mb-2 flex justify-center"
+    >
+      <video controls src="/image/LunaCare/final_video.mp4" className="w-full max-h-full" />
+    </motion.div>
+    </div>
    
 
      
