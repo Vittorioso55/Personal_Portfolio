@@ -65,7 +65,7 @@ const PageAbout = () => {
           <div className="mt-2">{TAB_DATA.find((t) => t.id === tab).content}</div>
         </div>
         <div className="md:w-1/2 mx-0">
-          <Image src="/image/Foto_Me/Vittorio.png"  width={800} height={800} />
+          <Image src="/image/Foto_Me/Foto_Me.png"  width={800} height={800} />
         </div>
       </div>
     </section>

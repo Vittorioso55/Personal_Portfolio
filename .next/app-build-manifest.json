@@ -11,10 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/projectLuna/page": [
+    "/PageAbout/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/projectLuna/page.js"
+      "static/chunks/app/PageAbout/page.js"
     ]
   }
 }
