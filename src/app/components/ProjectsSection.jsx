@@ -8,6 +8,15 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
+    id: 9,
+    title: "",
+    description: "Mxline - 2024 - Frontend Developer",
+    image: "/image/Mxline/Mx0.jpg",
+    tag: ["All", "Mobile"],
+    gitUrl: "/",
+    previewUrl: "./projectMxline",
+  },
+  {
     id: 8,
     title: "",
     description: "Edee  - 2024 - Creating Intelligente Experience",
@@ -15,8 +24,6 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "./projectEdee",
-
-
   },
   {
     id: 3,

@@ -11,10 +11,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/PageAbout/page": [
+    "/projectMxline/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/PageAbout/page.js"
+      "static/chunks/app/projectMxline/page.js"
+    ],
+    "/projectGender/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projectGender/page.js"
     ]
   }
 }
