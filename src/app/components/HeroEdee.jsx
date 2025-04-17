@@ -23,8 +23,34 @@ const HeroEdee = () => {
         >
           <p>
             EDEE is a personalized AI-driven companion tailored specifically for teenagers with Autism Spectrum Disorder (ASD). Seamlessly integrated with your smartwatch, EDEE harnesses biometric data to gauge stress levels and deliver discreet, customized support. From managing routines to addressing disruptions in real-time, EDEE offers a comprehensive solution for ASD individuals. Whether it's breaking down tasks or providing insights through data analysis, EDEE empowers teenagers with ASD, enhancing their independence and well-being proactively and reactively.          
-        </p>
+          </p>
+          <br/>
+          <a
+          className="bg-gray-500 hover:bg-gray-600 text-1xl text-white font-normal py-2 px-5 rounded-full"
+          href="https://www.figma.com/proto/yKmvde2gviRtoz7qPQdmfW/EDEE-Onboarding-Prototype?node-id=1-2252&t=8OSFa5057myXstWD-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+            Prototype
+          </a>
         </motion.div>
+
+        {/* <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}          >
+          <a
+          className="mt-2 bg-gray-500 hover:bg-gray-600 text-1xl text-white font-normal py-2 px-5 rounded-full"
+          href="https://www.figma.com/proto/yKmvde2gviRtoz7qPQdmfW/EDEE-Onboarding-Prototype?node-id=1-2252&t=8OSFa5057myXstWD-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+            Prototype
+          </a>
+          </motion.div> */}
+      
+        
+        
       <br />
       <br />
       <br />
@@ -33,10 +59,7 @@ const HeroEdee = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      
       
 
         <div className="mt-20 text-[#ADB7BE] text-left font-light">

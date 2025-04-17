@@ -25,7 +25,9 @@ const HeroLuna = () => {
         </motion.div>
      
       
-
+      <br/>
+      <br/>
+    
         <div className="mt-96 text-[#ADB7BE] text-left font-light">
           <p> Co-Designer: &nbsp; Hanna Kastritza, Ieva Kavaluiskate
           </p>

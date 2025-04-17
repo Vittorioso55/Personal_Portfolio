@@ -131,7 +131,7 @@ const ProjectsSection = () => {
             initial="initial"
             animate="animate"
             variants={cardVariants}
-            transition={{ delay: index * 1, duration: 0.7 }}
+            transition={{ delay: index * 1, duration: 0.4 }}
           >
             <ProjectCard
               title={project.title}
