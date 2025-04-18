@@ -35,6 +35,17 @@ const HeroEdee = () => {
           </a>
         </motion.div>
 
+        <a
+          className="bg-gray-500 hover:bg-gray-600 text-1xl text-white font-normal py-2 px-5 rounded-full"
+          href="https://wa.me/393313469980"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+            Contact us
+          </a>
+
+        
+
         {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
