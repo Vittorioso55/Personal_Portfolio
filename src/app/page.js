@@ -1,71 +1,140 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
-import ProjectsSection from "./components/ProjectsSection";
 import Cursor from "./components/Cursor";
+// import ProjectsSection from "./components/ProjectsSection";
+
+const IMAGE_DURATION = 5000;
 
 const slides = [
-  { type: "image", src: "/image/Background/Back8.MOV" },
-  { type: "video", src: "/media/video1.mp4" },
-  { type: "image", src: "/media/img2.jpg" },
-  { type: "video", src: "/media/video2.mp4" },
+  { type: "video", src: "/image/Background/Back_Intro.MOV" },
+  { type: "image", src: "/image/Background/Back2.JPG" },
+  { type: "video", src: "/image/Background/Back8.MOV" },
+  { type: "image", src: "/image/Background/Back3.JPG" },
+  { type: "video", src: "/image/Background/Back_intro_2.MOV" },
+  { type: "image", src: "/image/Background/Back4.JPG" },
+  { type: "image", src: "/image/Background/Back5.JPG" },
+  { type: "image", src: "/image/Background/Back6.JPG" },
+  { type: "image", src: "/image/Background/Back7.JPG" },
+  { type: "image", src: "/image/Background/Back9.JPG" },
+  { type: "image", src: "/image/Background/Back12.JPG" },
+  { type: "image", src: "/image/Background/Back13.MOV" },
 ];
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
+  const timeoutRef = useRef(null);
+  const videoRef = useRef(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000); // cambia ogni 5 secondi
-
-    return () => clearInterval(interval);
+  const safeSlides = useMemo(() => {
+    return slides.filter((slide) => slide?.src && slide?.type);
   }, []);
 
+  const nextSlide = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % safeSlides.length);
+  }, [safeSlides.length]);
+
+  const clearExistingTimeout = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!safeSlides.length) return;
+
+    clearExistingTimeout();
+
+    const activeSlide = safeSlides[current];
+
+    if (activeSlide.type === "image") {
+      timeoutRef.current = setTimeout(() => {
+        nextSlide();
+      }, IMAGE_DURATION);
+    }
+
+    return () => {
+      clearExistingTimeout();
+    };
+  }, [current, nextSlide, safeSlides, clearExistingTimeout]);
+
+  useEffect(() => {
+    if (!safeSlides.length) return;
+
+    safeSlides.forEach((slide) => {
+      if (slide.type === "image") {
+        const img = new Image();
+        img.src = slide.src;
+      } else if (slide.type === "video") {
+        const video = document.createElement("video");
+        video.src = slide.src;
+        video.preload = "auto";
+      }
+    });
+  }, [safeSlides]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const activeSlide = safeSlides[current];
+
+    if (!video || !activeSlide || activeSlide.type !== "video") return;
+
+    video.currentTime = 0;
+
+    const playVideo = async () => {
+      try {
+        await video.play();
+      } catch (err) {
+        console.error("Errore autoplay video:", err);
+      }
+    };
+
+    playVideo();
+  }, [current, safeSlides]);
+
+  if (!safeSlides.length) {
+    return null;
+  }
+
+  const activeSlide = safeSlides[current];
+
   return (
-    <section className="w-full h-screen overflow-hidden relative">
-      
-      {/* BACKGROUND SLIDER */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute w-full h-full transition-opacity duration-1000 ${
-              index === current ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {slide.type === "image" ? (
-              <img
-                src={slide.src}
-                className="w-full h-full object-cover"
-                alt=""
-              />
-            ) : (
-              <video
-                src={slide.src}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              />
-            )}
-          </div>
-        ))}
+    <section className="relative w-full h-screen overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        {activeSlide.type === "image" ? (
+          <img
+            key={activeSlide.src}
+            src={activeSlide.src}
+            alt="Background slide"
+            className="w-full h-full object-cover"
+            draggable={false}
+          />
+        ) : (
+          <video
+            key={activeSlide.src}
+            ref={videoRef}
+            src={activeSlide.src}
+            muted
+            playsInline
+            preload="auto"
+            autoPlay
+            onEnded={nextSlide}
+            className="w-full h-full object-cover"
+          />
+        )}
+
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* CONTENUTO */}
-      <main className="relative z-10 flex min-h-screen flex-col justify-between">
-        
+      <main className="relative z-20 flex min-h-screen flex-col justify-between p-0">
         <Cursor />
         <Navbar />
 
-        {/* Qui puoi aggiungere contenuto sopra lo slider */}
-        <div className="flex items-center justify-center h-full text-white text-4xl font-bold">
-          {/* eventuale titolo */}
-        </div>
+        <div className="flex-1" />
 
+        {/* <ProjectsSection /> */}
       </main>
     </section>
   );
