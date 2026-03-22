@@ -24,57 +24,73 @@ const slides = [
 export default function Home() {
   const [current, setCurrent] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const timeoutRef = useRef(null);
   const videoRef = useRef(null);
 
+  // 👇 Detect mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // 👇 Filtra slides su mobile (solo immagini)
+  const filteredSlides = isMobile
+    ? slides.filter((slide) => slide.type === "image")
+    : slides;
+
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % slides.length);
+    setCurrent((prev) => (prev + 1) % filteredSlides.length);
   };
 
+  // 👇 gestione immagini
   useEffect(() => {
-    const activeSlide = slides[current];
+    const activeSlide = filteredSlides[current];
 
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
-    if (activeSlide.type === "image") {
-      timeoutRef.current = setTimeout(() => {
-        nextSlide();
-      }, IMAGE_DURATION);
+    if (activeSlide?.type === "image") {
+      timeoutRef.current = setTimeout(nextSlide, IMAGE_DURATION);
     }
 
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-        timeoutRef.current = null;
-      }
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [current]);
+  }, [current, filteredSlides]);
 
+  // 👇 autoplay video (solo desktop)
   useEffect(() => {
-    const activeSlide = slides[current];
+    if (isMobile) return;
 
-    if (activeSlide.type !== "video") return;
+    const activeSlide = filteredSlides[current];
+
+    if (activeSlide?.type !== "video") return;
 
     const video = videoRef.current;
     if (!video) return;
 
-    const tryPlay = async () => {
+    const playVideo = async () => {
       try {
         video.currentTime = 0;
         await video.play();
-      } catch (error) {
-        console.error("Autoplay video non riuscito:", error);
+      } catch (e) {
+        console.log("video non parte");
       }
     };
 
-    tryPlay();
-  }, [current]);
+    playVideo();
+  }, [current, isMobile, filteredSlides]);
 
-  const activeSlide = slides[current];
+  if (!filteredSlides.length) return null;
+
+  const activeSlide = filteredSlides[current];
 
   return (
     <section
@@ -83,6 +99,7 @@ export default function Home() {
         if (!showNavbar) setShowNavbar(true);
       }}
     >
+      {/* BACKGROUND */}
       <div className="absolute inset-0 z-0">
         {activeSlide.type === "image" ? (
           <img
@@ -102,8 +119,6 @@ export default function Home() {
             autoPlay
             playsInline
             preload="auto"
-            controls={false}
-            disablePictureInPicture
             onEnded={nextSlide}
             onError={nextSlide}
             className="h-full w-full object-cover"
@@ -113,7 +128,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <main className="relative z-10 flex min-h-[100svh] flex-col justify-between p-0">
+      {/* CONTENUTO */}
+      <main className="relative z-10 flex min-h-[100svh] flex-col justify-between">
         <Cursor />
 
         <div
