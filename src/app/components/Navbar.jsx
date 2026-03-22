@@ -10,10 +10,18 @@ import MenuOverlay from "./MenuOverlay";
 const navLinks = [
 
   {
+    title: "Home",
+    path: "/",
+  },
+
+  {
+    title: "Projects",
+    path: "/Home_Progetti",
+  },
+  {
     title: "About Me",
     path: "/PageAbout",
   },
-
 ];
 
 const PageAbout = () => {

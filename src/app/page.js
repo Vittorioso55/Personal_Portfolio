@@ -1,9 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
-// import ProjectsSection from "./components/ProjectsSection";
 
 const IMAGE_DURATION = 5000;
 
@@ -19,122 +18,80 @@ const slides = [
   { type: "image", src: "/image/Background/Back7.JPG" },
   { type: "image", src: "/image/Background/Back9.JPG" },
   { type: "image", src: "/image/Background/Back12.JPG" },
-  { type: "image", src: "/image/Background/Back13.MOV" },
+  { type: "video", src: "/image/Background/Back13.MOV" },
 ];
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
+  const [showNavbar, setShowNavbar] = useState(false);
   const timeoutRef = useRef(null);
-  const videoRef = useRef(null);
 
-  const safeSlides = useMemo(() => {
-    return slides.filter((slide) => slide?.src && slide?.type);
-  }, []);
-
-  const nextSlide = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % safeSlides.length);
-  }, [safeSlides.length]);
-
-  const clearExistingTimeout = useCallback(() => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-  }, []);
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
 
   useEffect(() => {
-    if (!safeSlides.length) return;
+    const slide = slides[current];
 
-    clearExistingTimeout();
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
-    const activeSlide = safeSlides[current];
-
-    if (activeSlide.type === "image") {
-      timeoutRef.current = setTimeout(() => {
-        nextSlide();
-      }, IMAGE_DURATION);
+    if (slide.type === "image") {
+      timeoutRef.current = setTimeout(nextSlide, IMAGE_DURATION);
     }
 
     return () => {
-      clearExistingTimeout();
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [current, nextSlide, safeSlides, clearExistingTimeout]);
+  }, [current]);
 
-  useEffect(() => {
-    if (!safeSlides.length) return;
-
-    safeSlides.forEach((slide) => {
-      if (slide.type === "image") {
-        const img = new Image();
-        img.src = slide.src;
-      } else if (slide.type === "video") {
-        const video = document.createElement("video");
-        video.src = slide.src;
-        video.preload = "auto";
-      }
-    });
-  }, [safeSlides]);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    const activeSlide = safeSlides[current];
-
-    if (!video || !activeSlide || activeSlide.type !== "video") return;
-
-    video.currentTime = 0;
-
-    const playVideo = async () => {
-      try {
-        await video.play();
-      } catch (err) {
-        console.error("Errore autoplay video:", err);
-      }
-    };
-
-    playVideo();
-  }, [current, safeSlides]);
-
-  if (!safeSlides.length) {
-    return null;
-  }
-
-  const activeSlide = safeSlides[current];
+  const activeSlide = slides[current];
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section
+      className="relative w-full min-h-[100svh] overflow-hidden bg-black"
+      onClick={() => setShowNavbar(true)}
+    >
+      {/* BACKGROUND */}
       <div className="absolute inset-0 z-0">
         {activeSlide.type === "image" ? (
           <img
             key={activeSlide.src}
             src={activeSlide.src}
-            alt="Background slide"
-            className="w-full h-full object-cover"
-            draggable={false}
+            alt="Background"
+            onError={nextSlide}
+            className="h-full w-full object-cover"
           />
         ) : (
           <video
             key={activeSlide.src}
-            ref={videoRef}
             src={activeSlide.src}
+            autoPlay
             muted
             playsInline
             preload="auto"
-            autoPlay
             onEnded={nextSlide}
-            className="w-full h-full object-cover"
+            onError={nextSlide}
+            className="h-full w-full object-cover"
           />
         )}
 
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <main className="relative z-20 flex min-h-screen flex-col justify-between p-0">
+      {/* CONTENUTO */}
+      <main className="relative z-10 flex min-h-[100svh] flex-col justify-between">
         <Cursor />
-        <Navbar />
+
+        {/* NAVBAR */}
+        <div
+          className={`transition-opacity duration-500 ${
+            showNavbar ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <Navbar />
+        </div>
 
         <div className="flex-1" />
-
-        {/* <ProjectsSection /> */}
       </main>
     </section>
   );
