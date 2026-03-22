@@ -7,18 +7,18 @@ import Cursor from "./components/Cursor";
 const IMAGE_DURATION = 5000;
 
 const slides = [
-  { type: "video", src: "/image/Background/Back_Intro.MOV" },
+  { type: "video", src: "/image/Background/Back_Intro.mp4" },
   { type: "image", src: "/image/Background/Back2.JPG" },
-  { type: "video", src: "/image/Background/Back8.MOV" },
+  { type: "video", src: "/image/Background/Back8.mp4" },
   { type: "image", src: "/image/Background/Back3.JPG" },
-  { type: "video", src: "/image/Background/Back_intro_2.MOV" },
+  { type: "video", src: "/image/Background/Back_intro_2.mp4" },
   { type: "image", src: "/image/Background/Back4.JPG" },
   { type: "image", src: "/image/Background/Back5.JPG" },
   { type: "image", src: "/image/Background/Back6.JPG" },
   { type: "image", src: "/image/Background/Back7.JPG" },
   { type: "image", src: "/image/Background/Back9.JPG" },
   { type: "image", src: "/image/Background/Back12.JPG" },
-  { type: "video", src: "/image/Background/Back13.MOV" },
+  { type: "video", src: "/image/Background/Back13.mp4" },
 ];
 
 export default function Home() {
