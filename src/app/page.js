@@ -7,41 +7,71 @@ import Cursor from "./components/Cursor";
 const IMAGE_DURATION = 5000;
 
 const slides = [
-  { type: "video", src: "/image/Background/Back_Intro.mp4" },
+  { type: "video", src: "/image/Background/Back_Intro.MOV" },
   { type: "image", src: "/image/Background/Back2.JPG" },
-  { type: "video", src: "/image/Background/Back8.mp4" },
+  { type: "video", src: "/image/Background/Back8.MOV" },
   { type: "image", src: "/image/Background/Back3.JPG" },
-  { type: "video", src: "/image/Background/Back_intro_2.mp4" },
+  { type: "video", src: "/image/Background/Back_intro_2.MOV" },
   { type: "image", src: "/image/Background/Back4.JPG" },
   { type: "image", src: "/image/Background/Back5.JPG" },
   { type: "image", src: "/image/Background/Back6.JPG" },
   { type: "image", src: "/image/Background/Back7.JPG" },
   { type: "image", src: "/image/Background/Back9.JPG" },
   { type: "image", src: "/image/Background/Back12.JPG" },
-  { type: "video", src: "/image/Background/Back13.mp4" },
+  { type: "video", src: "/image/Background/Back13.MOV" },
 ];
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false);
+
   const timeoutRef = useRef(null);
+  const videoRef = useRef(null);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
   };
 
   useEffect(() => {
-    const slide = slides[current];
+    const activeSlide = slides[current];
 
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
 
-    if (slide.type === "image") {
-      timeoutRef.current = setTimeout(nextSlide, IMAGE_DURATION);
+    if (activeSlide.type === "image") {
+      timeoutRef.current = setTimeout(() => {
+        nextSlide();
+      }, IMAGE_DURATION);
     }
 
     return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
     };
+  }, [current]);
+
+  useEffect(() => {
+    const activeSlide = slides[current];
+
+    if (activeSlide.type !== "video") return;
+
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = async () => {
+      try {
+        video.currentTime = 0;
+        await video.play();
+      } catch (error) {
+        console.error("Autoplay video non riuscito:", error);
+      }
+    };
+
+    tryPlay();
   }, [current]);
 
   const activeSlide = slides[current];
@@ -49,9 +79,10 @@ export default function Home() {
   return (
     <section
       className="relative w-full min-h-[100svh] overflow-hidden bg-black"
-      onClick={() => setShowNavbar(true)}
+      onClick={() => {
+        if (!showNavbar) setShowNavbar(true);
+      }}
     >
-      {/* BACKGROUND */}
       <div className="absolute inset-0 z-0">
         {activeSlide.type === "image" ? (
           <img
@@ -59,16 +90,20 @@ export default function Home() {
             src={activeSlide.src}
             alt="Background"
             onError={nextSlide}
+            draggable={false}
             className="h-full w-full object-cover"
           />
         ) : (
           <video
             key={activeSlide.src}
+            ref={videoRef}
             src={activeSlide.src}
-            autoPlay
             muted
+            autoPlay
             playsInline
             preload="auto"
+            controls={false}
+            disablePictureInPicture
             onEnded={nextSlide}
             onError={nextSlide}
             className="h-full w-full object-cover"
@@ -78,11 +113,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* CONTENUTO */}
-      <main className="relative z-10 flex min-h-[100svh] flex-col justify-between">
+      <main className="relative z-10 flex min-h-[100svh] flex-col justify-between p-0">
         <Cursor />
 
-        {/* NAVBAR */}
         <div
           className={`transition-opacity duration-500 ${
             showNavbar ? "opacity-100" : "opacity-0 pointer-events-none"
