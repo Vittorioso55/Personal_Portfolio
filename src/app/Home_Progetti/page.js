@@ -1,7 +1,7 @@
 
-import Navbar from "./components/Navbar";
-import ProjectsSection from "./components/ProjectsSection";
-import Cursor from "./components/Cursor";
+import Navbar from "../components/Navbar";
+import ProjectsSection from "../components/ProjectsSection";
+import Cursor from "../components/Cursor";
 
 
 

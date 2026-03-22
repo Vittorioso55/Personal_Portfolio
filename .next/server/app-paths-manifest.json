@@ -1,3 +1,17 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/PageAbout/page": "app/PageAbout/page.js",
+  "/ProjectRenew/page": "app/ProjectRenew/page.js",
+  "/Home_Progetti/page": "app/Home_Progetti/page.js",
+  "/projectCharlie/page": "app/projectCharlie/page.js",
+  "/projectEdee/page": "app/projectEdee/page.js",
+  "/projectGenesis/page": "app/projectGenesis/page.js",
+  "/projectGender/page": "app/projectGender/page.js",
+  "/projectLuna/page": "app/projectLuna/page.js",
+  "/projectMatrix/page": "app/projectMatrix/page.js",
+  "/projectRadio/page": "app/projectRadio/page.js",
+  "/projectMxline/page": "app/projectMxline/page.js",
+  "/projectStrolling/page": "app/projectStrolling/page.js",
+  "/api/send/route": "app/api/send/route.js"
 }
