@@ -5,26 +5,31 @@ import Navbar from "./components/Navbar";
 import Cursor from "./components/Cursor";
 
 const IMAGE_DURATION = 5000;
+const VIDEO_MIN_DURATION = 10000; // durata minima per video brevi
 
 const slides = [
-  { type: "video", src: "/image/Background/Back_Intro.MOV" },
+  { type: "video", src: "/image/Background/Background.mov" },
+  { type: "video", src: "/image/Background/Back_Intro.mp4" },
+  { type: "image", src: "/image/Background/Back.JPG" },
+  { type: "video", src: "/image/Background/Back8.mp4" },
   { type: "image", src: "/image/Background/Back2.JPG" },
-  { type: "video", src: "/image/Background/Back8.MOV" },
+  { type: "video", src: "/image/Background/Back_intro2.mp4" },
   { type: "image", src: "/image/Background/Back3.JPG" },
-  { type: "video", src: "/image/Background/Back_intro_2.MOV" },
   { type: "image", src: "/image/Background/Back4.JPG" },
   { type: "image", src: "/image/Background/Back5.JPG" },
   { type: "image", src: "/image/Background/Back6.JPG" },
   { type: "image", src: "/image/Background/Back7.JPG" },
   { type: "image", src: "/image/Background/Back9.JPG" },
   { type: "image", src: "/image/Background/Back12.JPG" },
-  { type: "video", src: "/image/Background/Back13.MOV" },
+  { type: "image", src: "/image/Background/Back13.JPG" },
+  { type: "video", src: "/image/Background/Back10.mp4" },
 ];
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isFading, setIsFading] = useState(false);
 
   const timeoutRef = useRef(null);
   const videoRef = useRef(null);
@@ -47,7 +52,11 @@ export default function Home() {
     : slides;
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % filteredSlides.length);
+    setIsFading(true);
+    setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % filteredSlides.length);
+      setIsFading(false);
+    }, 500); // durata del fade
   };
 
   // 👇 gestione immagini
@@ -80,8 +89,14 @@ export default function Home() {
       try {
         video.currentTime = 0;
         await video.play();
+
+        // Assicurati durata minima
+        const duration = video.duration * 1000;
+        const minDuration = Math.max(duration, VIDEO_MIN_DURATION);
+        setTimeout(nextSlide, minDuration);
       } catch (e) {
         console.log("video non parte");
+        nextSlide();
       }
     };
 
@@ -108,7 +123,9 @@ export default function Home() {
             alt="Background"
             onError={nextSlide}
             draggable={false}
-            className="h-full w-full object-cover"
+            className={`h-full w-full object-cover transition-opacity duration-500 ${
+              isFading ? "opacity-0" : "opacity-100"
+            }`}
           />
         ) : (
           <video
@@ -121,7 +138,9 @@ export default function Home() {
             preload="auto"
             onEnded={nextSlide}
             onError={nextSlide}
-            className="h-full w-full object-cover"
+            className={`h-full w-full object-cover transition-opacity duration-500 ${
+              isFading ? "opacity-0" : "opacity-100"
+            }`}
           />
         )}
 
